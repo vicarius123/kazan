@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_FANCYBOX</name>
+    <author>Yireo</author>
+    <creationDate>May 2015</creationDate>
+    <copyright>Copyright 2015 Yireo.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <authorEmail>info@yireo.com</authorEmail>
+    <authorUrl>www.yireo.com</authorUrl>
+    <version>1.3.8</version>
+    <description>PLG_SYSTEM_FANCYBOX_DESC</description>
+
+    <files>
+        <filename plugin="fancybox">fancybox.php</filename>
+        <filename>index.html</filename>
+        <folder>fields</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_fancybox.ini</language>
+        <language tag="en-GB">en-GB.plg_system_fancybox.sys.ini</language>
+    </languages>
+
+    <media destination="plg_fancybox">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="elements" type="textarea" default="a.lightbox" cols="30" rows="10" 
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_ELEMENTS" 
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_ELEMENTS_DESC" />
+                <field name="hide_on_click" type="radio" default="0" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_HIDE_ON_CLICK" 
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_HIDE_ON_CLICK_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="enable_mousewheel" type="radio" default="0" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_ENABLE_MOUSEWHEEL"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_ENABLE_MOUSEWHEEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="transition" type="list" default="none" 
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_DESC">
+                    <option value="none">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_NONE</option>
+                    <option value="elastic">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_ELASTIC</option>
+                    <option value="fade">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_FADE</option>
+                    <option value="swing">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_SWING</option>
+                    <option value="linear">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_LINEAR</option>
+                    <option value="quad">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_QUAD</option>
+                    <option value="cubic">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_CUBIC</option>
+                    <option value="quart">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_QUART</option>
+                    <option value="quint">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_QUINT</option>
+                    <option value="sine">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_SINE</option>
+                    <option value="expo">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_EXPO</option>
+                    <option value="circ">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_CIRC</option>
+                    <option value="bounce">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_BOUNCE</option>
+                    <option value="back">PLG_SYSTEM_FANCYBOX_FIELD_TRANSITION_OPTION_BACK</option>
+                </field>
+                <field name="speed" type="list" default="200"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_SPEED"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_SPEED_DESC">
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                    <option value="200">200</option>
+                    <option value="250">250</option>
+                    <option value="300">300</option>
+                    <option value="350">350</option>
+                    <option value="400">400</option>
+                    <option value="450">450</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                    <option value="1000">1000</option>
+                    <option value="1200">1200</option>
+                    <option value="1400">1400</option>
+                    <option value="1600">1600</option>
+                    <option value="1800">1800</option>
+                    <option value="2000">2000</option>
+                    <option value="3000">3000</option>
+                    <option value="4000">4000</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced" addfieldpath="/plugins/system/fancybox/fields">
+                <field name="options" type="textarea" default="" cols="30" rows="10"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_OPTIONS"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_OPTIONS_DESC" />
+                <field name="use_flag" type="radio" default="0" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_USE_FLAG"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_USE_FLAG_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="use_google_api" type="radio" default="0" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_USE_GOOGLE_API"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_USE_GOOGLE_API_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_css" type="radio" default="1" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_CSS"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_CSS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_jquery" type="radio" default="1" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_JQUERY"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_JQUERY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_fancybox" type="radio" default="1" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_FANCYBOX"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_FANCYBOX_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_mousewheel" type="radio" default="1" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_MOUSEWHEEL"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_MOUSEWHEEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_easing" type="radio" default="1" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_EASING"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_EASING_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_buttons" type="radio" default="0" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_BUTTONS"
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_BUTTONS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_media" type="radio" default="0" class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_MEDIA" 
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_MEDIA_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_thumbs" type="radio" default="0"  class="btn-group btn-group-yesno"
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_THUMBS" 
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_LOAD_THUMBS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="exclude_components" type="components" 
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_EXCLUDE_COMPONENTS" 
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_EXCLUDE_COMPONENTS_DESC" />
+                <field name="content_type" type="list" default="" 
+                    label="PLG_SYSTEM_FANCYBOX_FIELD_CONTENT_TYPE" 
+                    description="PLG_SYSTEM_FANCYBOX_FIELD_CONTENT_TYPE_DESC">
+                    <option value="">auto</option>
+                    <option value="image">image</option>
+                    <option value="ajax">ajax</option>
+                    <option value="html">html</option>
+                    <option value="iframe">iframe</option>
+                    <option value="swf">swf</option>
+                    <option value="inline">inline</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="plg_system_fancybox">http://www.yireo.com/updates/plg_system_fancybox.xml</server>
+    </updateservers>
+</extension>

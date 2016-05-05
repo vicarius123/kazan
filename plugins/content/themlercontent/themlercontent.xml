@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_THEMLERCONTENT</name>
+    <creationDate>January 2016</creationDate>
+    <version>1.0.14</version>
+    <author/>
+    <copyright/>
+    <license/>
+    <authorEmail/>
+    <authorUrl/>
+    <description>PLG_CONTENT_THEMLERCONTENT_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="themlercontent">themlercontent.php</filename>
+        <filename>index.html</filename>
+        <folder>lib</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_themlercontent.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_themlercontent.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="bootstrapjs" type="list"
+                       default="1"
+                       description="PLG_CONTENT_BOOTSTRAPJS_INCLUDE_DESC"
+                       label="PLG_CONTENT_BOOTSTRAPJS_INCLUDE"
+                        >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="bootstrapcss" type="list"
+                       default="1"
+                       description="PLG_CONTENT_BOOTSTRAPCSS_INCLUDE_DESC"
+                       label="PLG_CONTENT_BOOTSTRAPCSS_INCLUDE"
+                        >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="jquery" type="list"
+                       default="1"
+                       description="PLG_CONTENT_JQUERY_INCLUDE_DESC"
+                       label="PLG_CONTENT_JQUERY_INCLUDE"
+                        >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,1 @@
+var themeHasJQuery = !!window.jQuery;

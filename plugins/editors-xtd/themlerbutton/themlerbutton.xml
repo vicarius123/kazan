@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="editors-xtd" method="upgrade">
+	<name>PLG_EDITORS-XTD_THEMLERBUTTON</name>
+	<author/>
+	<creationDate>January 2016</creationDate>
+    <version>1.0.6</version>
+	<copyright/>
+	<license/>
+	<authorEmail/>
+	<authorUrl/>
+	<description>PLG_EDITORS-XTD_THEMLERBUTTON_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="themlerbutton">themlerbutton.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_themlerbutton.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_themlerbutton.sys.ini</language>
+	</languages>
+</extension>
